@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous" />
+        <script src="https://kit.fontawesome.com/844ecd1e03.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./assets/style.css">
+
+
+        <title>Dota2 Card Matching Game</title>
+    </head>
+
+    <body>
+
+        <div class="main">
+
+            <!-- FADE BACKGROUND -->
+            <div class="fadebg"></div>
+            <!-- END FADE BACKGROUND -->
+
+            <!--  MENU -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Dota2 Card Matching</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link a_rules" href="#">RULES</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link a_gameplay" href="#">PLAY GAME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link a_contact" href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- END MENU -->
+
+            <!-- RULE -->
+            <div class="rules">
+                <div class="container">
+                    <div class="row text-center">
+                        <div class=" col-sm-3 col-md-3 col-lg-3">
+                            <i class="fas fa-volume-off"></i>
+                            <i class="fas fa-volume-up"></i>
+
+                            <audio controls loop id="audio">
+                                <source src="./assets/audio/fatrat.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
+                        <div class=" 6 col-sm-6 col-md-6 col-lg-6">
+                            <h1>Rules:</h1>
+                            <h5>There r 36 cards (18 pairs). Find 'em all. U only have 80 secs, so try ur best . Good
+                                luck!</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END RULE -->
+
+            <!-- PROGRESSBAR -->
+            <div class="progressBar">
+                <div class="bar"></div>
+            </div>
+            <!-- END PROGRESSBAR -->
+            <div class="container">
+                <div class="row">
+                    <div class=" col-sm-12 col-md-12 col-lg-12 text-center">
+                        <button type="button" class="btn btn-warning">Play</button>
+                    </div>
+                </div>
+            </div>
+            <!-- GAMEPLAY SECTION  -->
+            <div class="gameplay">
+                <div class="container-fluid">
+                    <div class="row9">
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n1" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n2" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n3" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n4" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n5" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n6" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n7" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n8" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n9" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row9">
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n10" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n11" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n12" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n13" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n14" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n15" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n16" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n17" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n18" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row9">
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n28" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n29" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n30" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n31" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n32" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n33" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n34" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n35" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n36" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row9">
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n19" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n20" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n21" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n22" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n23" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n24" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n25" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n26" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                        <div class="cards">
+                            <div class="front">
+                                <img id="n27" data-name="">
+                            </div>
+                            <div class="back">
+                                <img src="./assets/imgs/dota2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END GAMEPLAY SECTION  -->
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <div class="contact">
+            <div class="container">
+
+                <div class="row justify-content-between">
+                    <div class="  col-sm-5 col-md-5 col-lg-5">
+                        <h5 class="text-capitalize fw-bold">
+                            I'm Hoang Long
+                        </h5>
+                        <p class="lh-g">
+                            Thank you for your consideration. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolore obcaecati nostrum animi, omnis pariatur laborum, natus aperiam sim
+                        </p>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 right-col">
+                        <p><i class="fa fa-map-marker"></i> Tan Trieu, Thanh Tri, Ha Noi </p>
+                        <a href="https://zalo.me/0961361536"><i class="fa fa-phone"></i> Zalo : 0961361536 </a>
+                        <a href="mailto:hoanglonglpgxxx@gmail.com"><i class="fa fa-envelope"></i>
+                            hoanglonglpgxxx@gmail.com </a>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3 left-col">
+                        <a href="https://www.facebook.com/profile.php?id=100047146422333" target="_blank"
+                            title="facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            Facebook
+                        </a>
+                        <a href="https://github.com/hoanglonglpgxxx" target="_blank" title="github">
+                            <i class="fa-brands fa-github"></i>
+                            Github
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!--END FOOTER -->
+
+
+        <!-- WIN SECTION -->
+        <div class="winBg"></div>
+        <div class="winGame">
+            <div class="container text-center">
+                <div class="row ">
+                    <div class=" col-sm-12 col-md-12 col-lg-12">
+                        <img src="./assets/imgs/victory.gif">
+                    </div>
+                    <audio controls id="victory">
+                        <source src="./assets/audio/victory.mp3">
+                    </audio>
+                </div>
+                <div class="row">
+                    <div class="  col-sm-12 col-md-12 col-lg-12">
+                        <button class="restart">Restart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END WIN SECTION -->
+        <!-- LOSE SECTION -->
+
+        <div class="loseGame">
+            <div class="container text-center">
+                <div class="row">
+                    <div class=" col-sm-12 col-md-12 col-lg-12">
+                        <img src="./assets/imgs/fy_the_loser.gif">
+                    </div>
+                    <audio controls id="lose">
+                        <source src="./assets/audio/lose.mpeg">
+                    </audio>
+                </div>
+
+                <div class="row">
+                    <div class=" col-sm-12 col-md-12 col-lg-12">
+                        <button class="restart">Restart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--END LOSE SECTION -->
+
+        <script src="./assets/main.js"></script>
+
+    </body>
+
+</html>
