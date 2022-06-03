@@ -136,7 +136,7 @@ $(document).ready(function () {
 
 
     finalCards = finalCards.concat(finalCards); //////////     x2 mảng    //////////
-    finalCards.sort(function (a, b) { return 0.5 - Math.random(); });/////// xếp ngẫu nhiên mảng 24 quân ///////////
+    finalCards.sort(function (a, b) { return 0.5 - Math.random(); });/////// xếp ngẫu nhiên mảng 42 quân ///////////
 
     document.getElementById("n1").src = './assets/imgs/' + finalCards[0];
     document.getElementById("n2").src = './assets/imgs/' + finalCards[1];
